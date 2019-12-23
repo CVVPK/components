@@ -1,7 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { Alert } from '../src'
-import './CustomClasses.css'
 
 storiesOf('Alert', module)
   .addParameters({
@@ -36,18 +35,18 @@ storiesOf('Alert', module)
         message={<strong>With a strong message</strong>}
       />
       <Alert
-        btnClassName="customClass2"
-        className="customClass"
-        dismissible
-        message="And it has a button with a custom class"
         title="This is an alert with a custom class"
+        className="customClass"
+        message="And it has a button with a custom class"
+        btnClassName="customClass2"
+        dismissible
       />
       <Alert
-        btnStyle={{ background: 'red' }}
-        dismissible
-        message="And it has a button with a custom style"
-        style={{ height: '50%', width: '50%', border: '2px solid red' }}
         title="This is an alert with a custom style"
+        style={{ height: '50%', width: '50%', border: '2px solid red' }}
+        message="And it has a button with a custom style"
+        btnStyle={{ background: 'red', color: 'white' }}
+        dismissible
       />
     </div>
   ))

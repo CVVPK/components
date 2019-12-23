@@ -48,8 +48,14 @@ interface Props {
  * Icons provide contextual clues to users to make it easier to recognize functionality
  */
 const Icon = (props: Props) => {
-  const { icon } = props
-  return <FontAwesomeIcon icon={getFontAwesomeIcon(icon) as IconProp} />
+  const { icon, className, style } = props
+  return (
+    <FontAwesomeIcon
+      icon={getFontAwesomeIcon(icon) as IconProp}
+      className={className}
+      style={style}
+    />
+  )
 }
 
 export { Icon }

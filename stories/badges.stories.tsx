@@ -4,8 +4,6 @@ import { storiesOf } from '@storybook/react'
 
 import { Badge } from '../src'
 
-import './CustomClasses.css'
-
 storiesOf('Badge', module)
   .addParameters({
     info: {

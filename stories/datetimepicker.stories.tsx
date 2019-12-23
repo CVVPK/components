@@ -242,3 +242,16 @@ storiesOf('DateTimePickers', module)
       </div>
     )
   })
+  .add('Custom class', () => {
+    const [startDate, setStartDate] = useState(new Date())
+
+    return (
+      <div>
+        <DateTimePicker
+          className="customClass2"
+          selected={startDate}
+          onChange={(date) => setStartDate(date)}
+        />
+      </div>
+    )
+  })

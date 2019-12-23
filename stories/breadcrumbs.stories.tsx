@@ -3,8 +3,6 @@ import { storiesOf } from '@storybook/react'
 
 import { Breadcrumb, BreadcrumbItem } from '../src'
 
-import './CustomClasses.css'
-
 storiesOf('Breadcrumbs', module)
   .addParameters({
     info: {

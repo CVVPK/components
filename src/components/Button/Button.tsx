@@ -32,11 +32,11 @@ export interface Props {
    */
   style?: CSSProperties
   /**
-   * Defines the class of the icon.
+   * Defines the class of the button.
    */
   iconClassName?: string
   /**
-   * Defines the style of the icon.
+   * Defines the style of the button.
    */
   iconStyle?: CSSProperties
 }

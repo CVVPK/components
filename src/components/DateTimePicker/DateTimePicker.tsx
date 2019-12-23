@@ -62,6 +62,10 @@ interface Props {
   startDate?: Date
   /** Visualize calendar as portal. */
   withPortal?: boolean
+  /**
+   * Defines the class of the datetimepicker.
+   */
+  className?: string
 }
 
 const DateTimePicker = (props: Props) => {
@@ -95,6 +99,7 @@ const DateTimePicker = (props: Props) => {
     todayButton,
     startDate,
     withPortal,
+    className,
   } = props
 
   return (
@@ -127,6 +132,7 @@ const DateTimePicker = (props: Props) => {
       todayButton={todayButton}
       startDate={startDate}
       withPortal={withPortal}
+      className={className}
     >
       {children}
     </DatePicker>
