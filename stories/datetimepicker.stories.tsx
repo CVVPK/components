@@ -10,7 +10,9 @@ storiesOf('DateTimePickers', module)
       inline: true,
     },
   })
-  .addDecorator((storyFn) => <div style={{ textAlign: 'center' }}>{storyFn()}</div>)
+  .addDecorator((storyFn) => (
+    <div style={{ textAlign: 'center', marginLeft: '40px' }}>{storyFn()}</div>
+  ))
   .add('Default', () => {
     const [startDate, setStartDate] = useState(new Date())
 
@@ -238,19 +240,6 @@ storiesOf('DateTimePickers', module)
           showMonthDropdown
           showYearDropdown
           dropdownMode="scroll"
-        />
-      </div>
-    )
-  })
-  .add('Custom class', () => {
-    const [startDate, setStartDate] = useState(new Date())
-
-    return (
-      <div>
-        <DateTimePicker
-          className="customClass2"
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
         />
       </div>
     )

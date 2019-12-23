@@ -39,7 +39,7 @@ it('Checkbox handle the change event', () => {
 it('accepts props and defaults as by DatePicker API', () => {
   const selectedDate = new Date()
   const date = new Date()
-  const datePickerWrapper = shallow(
+  const datePickerWrapper = mount(
     <DateTimePicker
       dateFormat="MM/dd/yyyy"
       disabled
@@ -68,7 +68,6 @@ it('accepts props and defaults as by DatePicker API', () => {
       todayButton="Today"
       startDate={date}
       withPortal
-      className="customClass"
     />,
   )
 
@@ -99,5 +98,4 @@ it('accepts props and defaults as by DatePicker API', () => {
   expect(pickerProps.todayButton).toEqual('Today')
   expect(pickerProps.startDate).toEqual(date)
   expect(pickerProps.withPortal).toBeTruthy()
-  expect(pickerProps.className).toEqual('customClass')
 })
