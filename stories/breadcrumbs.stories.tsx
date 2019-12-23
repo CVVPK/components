@@ -3,6 +3,8 @@ import { storiesOf } from '@storybook/react'
 
 import { Breadcrumb, BreadcrumbItem } from '../src'
 
+import './CustomClasses.css'
+
 storiesOf('Breadcrumbs', module)
   .addParameters({
     info: {
@@ -25,6 +27,21 @@ storiesOf('Breadcrumbs', module)
     <Breadcrumb>
       <BreadcrumbItem active>
         <a href="https://example.com">Custom link item</a>
+      </BreadcrumbItem>
+    </Breadcrumb>
+  ))
+  .add('Breadcrumb can use custom style', () => (
+    <Breadcrumb style={{ padding: 10, background: 'cyan' }}>
+      <BreadcrumbItem active style={{ color: 'blue', fontStyle: 'italic' }}>
+        Item 1
+      </BreadcrumbItem>
+      <BreadcrumbItem style={{ background: 'yellow' }}>Item 2</BreadcrumbItem>
+    </Breadcrumb>
+  ))
+  .add('Breadcrumb can use custom class', () => (
+    <Breadcrumb className="customClass">
+      <BreadcrumbItem active className="customClass2">
+        Custom Class
       </BreadcrumbItem>
     </Breadcrumb>
   ))

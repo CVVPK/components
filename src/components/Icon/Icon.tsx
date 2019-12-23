@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconProp } from '@fortawesome/fontawesome-svg-core'
 import { IconType } from './interfaces'
@@ -34,6 +34,14 @@ function getFontAwesomeIcon(icon: IconType): string {
 interface Props {
   /** The type of icon to display */
   icon: IconType
+  /**
+   * Defines the class of the icon.
+   */
+  className?: string
+  /**
+   * Defines the style of the icon.
+   */
+  style?: CSSProperties
 }
 
 /**
